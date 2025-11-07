@@ -1,20 +1,175 @@
-body {
-    font-family: Arial,  sans-serif; /* Familia de fuentes */
-    font-size: 11px; /* El tamaño de la fuente principal en el tag <p></p> */
-    background-color: #696767; /* El color del fondo de la página web */
-    color: #ffffff; /* El color del texto*/ 
+:root {
+    --color-primario: #ff2d55;
+    --color-secundario: #00e6e6;
+    --color-fondo: #0e0e18;
+    --color-texto: #ffffff;
+    --color-hover: #ffb347;
 }
 
-h1 {
-    color: blue;
-    font-size: 24px; /* El tamaño de la fuente de la cabecera */
-    font-family: Georgia, serif; /* La familia tipográfica utilizada en la cabecera */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
 }
-p{
-    color: aquamarine;
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
 }
-img{
-    width: 350px;
-    height: 300px;
-    margin-left: 100px;
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+nav a {
+    color: var(--color-texto);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-primario);
+}
+
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #141426, #1f1f38);
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: var(--color-secundario);
+}
+
+.hero p {
+    margin: 15px 0;
+    color: #ccc;
+}
+
+.hero input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    width: 250px;
+    font-size: 16px;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+.hero input:focus {
+    box-shadow: 0 0 15px var(--color-secundario);
+}
+
+
+.content {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.content h2 {
+    color: var(--color-secundario);
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--color-primario);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    color: var(--color-primario);
+}
+
+.card p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.movie-list {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.movie-list li {
+    margin: 10px 0;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.movie-list li:hover {
+    color: var(--color-primario);
+    transform: translateX(8px);
+}
+
+
+.contact {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1f1f38, #0e0e18);
+}
+
+.contact button {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact button:hover {
+    background-color: var(--color-hover);
+    transform: scale(1.1);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    background-color: rgba(0,0,0,0.4);
+    color: #aaa;
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
